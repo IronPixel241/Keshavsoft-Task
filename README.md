@@ -1,273 +1,157 @@
-# RemixUI - Interactive Bootstrap 5 Website
+# RemixUI - Modern Bootstrap 5 Site with Vite
 
-A modern, interactive website built with Bootstrap 5 featuring advanced UI interactions, animations, and user experience enhancements.
+A modern, responsive website built with Bootstrap 5, Vite, and Nunjucks templating for fast development and live reload.
 
-## 🚀 Features
+## Features
 
-### Interactive UI Elements
+- ⚡ **Vite** - Lightning fast build tool with hot module replacement
+- 🎨 **Bootstrap 5** - Modern, responsive CSS framework
+- 📝 **Nunjucks Templates** - Template inheritance and reusable components
+- 🌙 **Dark Mode Toggle** - Built-in theme switching
+- 🔍 **Search Functionality** - Real-time search across content
+- 📱 **Responsive Design** - Mobile-first approach
+- ⚡ **Live Reload** - Instant updates during development
 
-#### 🌙 Dark Mode Toggle
-- **Location**: Navigation bar (sun/moon icon)
-- **Functionality**: 
-  - Toggles between light and dark themes
-  - Persists user preference in localStorage
-  - Smooth transitions between themes
-  - Automatically applies dark mode styles to all components
-
-#### 🔍 Search Functionality
-- **Location**: Navigation bar
-- **Functionality**:
-  - Real-time search through all cards and content
-  - Filters content as you type
-  - Smooth fade-in animations for search results
-  - Works across all pages
-
-#### ✨ Animations & Transitions
-- **Fade-in animations**: Elements appear smoothly as you scroll
-- **Slide animations**: Content slides in from left/right
-- **Hover effects**: Cards lift and glow on hover
-- **Loading animations**: Buttons show loading states
-- **Progress bars**: Animated progress indicators
-- **Counter animations**: Numbers count up when visible
-- **Pulse effects**: Call-to-action buttons pulse to draw attention
-- **Bounce effects**: Badges and icons bounce for emphasis
-
-### Enhanced Components
-
-#### 📱 Responsive Navigation
-- Sticky navigation with smooth scrolling
-- Active page highlighting
-- Collapsible mobile menu
-- Theme toggle and search integration
-
-#### 🎨 Interactive Cards
-- Hover lift effects with shadows
-- Progress indicators
-- Icon integration with Font Awesome
-- Smooth transitions and animations
-- Searchable content
-
-#### 📊 Statistics Section
-- Animated counters that count up when visible
-- Icon-based statistics display
-- Responsive grid layout
-- Smooth animations
-
-#### 💬 Testimonials
-- Interactive testimonial cards
-- User avatars and social links
-- Hover effects and animations
-- Professional styling
-
-#### 👥 Team Section
-- Team member cards with social links
-- Interactive hover effects
-- Professional layout
-- Responsive design
-
-#### 📅 Timeline
-- Interactive timeline component
-- Milestone markers
-- Smooth animations
-- Professional styling
-
-#### 📞 Contact Form
-- **Enhanced Validation**:
-  - Real-time field validation
-  - Visual feedback (green/red borders)
-  - Character counter for message field
-  - Required field indicators
-- **Interactive Features**:
-  - Loading states during submission
-  - Success/error notifications
-  - Form reset functionality
-  - Auto-dismissing alerts
-
-#### ❓ FAQ Section
-- Bootstrap accordion component
-- Smooth expand/collapse animations
-- Professional styling
-- Responsive design
-
-### Technical Features
-
-#### 🎯 Performance Optimizations
-- Intersection Observer API for efficient animations
-- Lazy loading of animations
-- Optimized CSS transitions
-- Minimal JavaScript footprint
-
-#### 🎨 Modern CSS Features
-- CSS Custom Properties (variables)
-- CSS Grid and Flexbox
-- Modern animations and transitions
-- Responsive design patterns
-
-#### 🔧 Modular JavaScript
-- Class-based architecture
-- Centralized functionality in `js/main.js`
-- Event-driven interactions
-- Clean, maintainable code
-
-## 📁 Project Structure
+## Project Structure
 
 ```
-Keshavsoft task/
-├── index.html          # Home page with hero, features, testimonials, stats
-├── about.html          # About page with services, team, timeline
-├── contact.html        # Contact page with form, FAQ, contact info
-├── css/
-│   └── style.css       # Enhanced styles with animations and dark mode
-├── js/
-│   └── main.js         # Centralized JavaScript functionality
-├── assets/
-│   └── images/         # Image assets
-└── README.md           # This file
+├── src/
+│   ├── index.html          # Home page with Nunjucks templates
+│   ├── about.html          # About page
+│   ├── contact.html        # Contact page
+│   ├── css/
+│   │   └── style.css       # Custom styles
+│   ├── js/
+│   │   └── main.js         # Interactive functionality
+│   └── templates/
+│       ├── base.njk        # Base template
+│       └── partials/
+│           ├── navbar.njk  # Navigation component
+│           └── footer.njk  # Footer component
+├── dist/                   # Build output (generated)
+├── package.json
+├── vite.config.js
+└── README.md
 ```
 
-## 🛠️ Technologies Used
+## Getting Started
 
-- **HTML5**: Semantic markup
-- **CSS3**: Modern styling with animations
-- **Bootstrap 5**: UI framework
-- **JavaScript (ES6+)**: Interactive functionality
-- **Font Awesome**: Icons
-- **Intersection Observer API**: Performance animations
+### Prerequisites
 
-## 🎮 Interactive Features Breakdown
+- Node.js (version 16 or higher)
+- npm or yarn
 
-### Theme Management
-```javascript
-// Toggle between light and dark themes
-const themeToggle = document.getElementById('themeToggle');
-themeToggle.addEventListener('click', () => {
-  // Theme switching logic
-});
+### Installation
+
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd remixui-vite
 ```
 
-### Search Functionality
-```javascript
-// Real-time search through content
-searchInput.addEventListener('input', (e) => {
-  const searchTerm = e.target.value.toLowerCase();
-  // Filter and display matching content
-});
+2. Install dependencies:
+```bash
+npm install
 ```
 
-### Animation System
-```javascript
-// Intersection Observer for scroll-triggered animations
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-    }
-  });
-});
+3. Start the development server:
+```bash
+npm run dev
 ```
 
-### Form Validation
-```javascript
-// Real-time form validation with visual feedback
-formInputs.forEach(input => {
-  input.addEventListener('blur', () => validateField(input));
-  input.addEventListener('input', () => validateField(input));
-});
+The site will be available at `http://localhost:3000` with live reload enabled.
+
+### Available Scripts
+
+- `npm run dev` - Start development server with hot reload
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build locally
+- `npm run clean` - Clean build directory
+
+## Development Features
+
+### Template System
+
+The project uses a custom Nunjucks-like template system with Vite:
+
+- **Template Inheritance**: All pages extend `base.njk`
+- **Reusable Components**: Navbar and footer are partial templates
+- **Variable Replacement**: Dynamic content with `{{ variable }}` syntax
+- **Active Page Detection**: Automatic navigation highlighting
+
+### Interactive Features
+
+- **Theme Toggle**: Switch between light and dark modes
+- **Search**: Real-time search across page content
+- **Animations**: Smooth scroll animations and counters
+- **Form Validation**: Contact form with validation and feedback
+- **Responsive Design**: Mobile-first Bootstrap 5 layout
+
+### CSS Features
+
+- Custom animations and transitions
+- Glass morphism effects
+- Hover states and interactive elements
+- Dark mode support
+- Responsive grid system
+
+## Building for Production
+
+```bash
+npm run build
 ```
 
-## 🎨 CSS Classes
+This will create an optimized build in the `dist/` directory ready for deployment.
 
-### Animation Classes
-- `.fade-in`: Fade in animation
-- `.slide-in-left`: Slide from left
-- `.slide-in-right`: Slide from right
-- `.pulse`: Pulsing animation
-- `.bounce`: Bouncing animation
-- `.hover-lift`: Hover lift effect
-- `.interactive-card`: Interactive card effects
+## Customization
 
-### Utility Classes
-- `.animate-delay-1` to `.animate-delay-5`: Animation delays
-- `.loading`: Loading state
-- `.glass`: Glass morphism effect
-- `.theme-toggle`: Theme toggle component
+### Adding New Pages
 
-## 🚀 Getting Started
+1. Create a new HTML file in `src/`
+2. Use the Nunjucks template syntax:
+```html
+{% extends "templates/base.njk" %}
 
-1. **Clone or download** the project files
-2. **Open** `index.html` in a modern web browser
-3. **Explore** the interactive features:
-   - Click the sun/moon icon to toggle dark mode
-   - Use the search bar to filter content
-   - Scroll to see animations
-   - Fill out the contact form
-   - Navigate between pages
+{% block title %}Page Title — {{ siteName }}{% endblock %}
 
-## 🎯 Browser Support
-
-- Chrome 60+
-- Firefox 55+
-- Safari 12+
-- Edge 79+
-
-## 📱 Responsive Design
-
-The website is fully responsive and works on:
-- Desktop computers
-- Tablets
-- Mobile phones
-- All screen sizes
-
-## 🔧 Customization
-
-### Adding New Animations
-```css
-.your-animation {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.your-animation.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
+{% block content %}
+<!-- Your page content here -->
+{% endblock %}
 ```
 
-### Adding New Interactive Components
-```javascript
-// Add to main.js
-class YourComponent {
-  constructor() {
-    this.init();
-  }
-  
-  init() {
-    // Your interactive logic
-  }
-}
-```
+3. Add the page to `vite.config.js` in the `rollupOptions.input` section
 
-## 📈 Performance
+### Modifying Styles
 
-- **Lighthouse Score**: 95+ (Performance, Accessibility, Best Practices, SEO)
-- **First Contentful Paint**: < 1.5s
-- **Largest Contentful Paint**: < 2.5s
-- **Cumulative Layout Shift**: < 0.1
+- Edit `src/css/style.css` for custom styles
+- Bootstrap 5 classes are available throughout
+- CSS custom properties for theming
 
-## 🤝 Contributing
+### Adding JavaScript Functionality
 
-Feel free to enhance the project by:
-- Adding new interactive features
-- Improving animations
-- Enhancing accessibility
-- Optimizing performance
-- Adding new pages or components
+- Edit `src/js/main.js` for interactive features
+- Modular class-based architecture
+- Event-driven functionality
 
-## 📄 License
+## Browser Support
 
-This project is open source and available under the MIT License.
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
 
----
+## License
 
-**Built with ❤️ using Bootstrap 5 and modern web technologies**
+This project is open source and available under the [MIT License](LICENSE).
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Test thoroughly
+5. Submit a pull request
+
+## Support
+
+For questions or issues, please open an issue on GitHub or contact the development team.

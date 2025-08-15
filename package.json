@@ -1,0 +1,16 @@
+{
+  "name": "remixui-vite",
+  "version": "1.0.0",
+  "description": "Modern Bootstrap 5 site with Vite and Nunjucks",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "clean": "rimraf dist"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0",
+    "rimraf": "^5.0.0"
+  }
+}

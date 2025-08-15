@@ -1,0 +1,226 @@
+{% extends "templates/base.njk" %}
+
+{% block title %}{{ siteName }} — {{ siteDescription }}{% endblock %}
+
+{% block content %}
+<!-- Hero -->
+<section class="hero-gradient py-5 py-lg-6">
+  <div class="container">
+    <div class="row align-items-center g-4">
+      <div class="col-lg-7 fade-in">
+        <h1 class="display-5 fw-bold mb-3">Build clean, responsive pages fast.</h1>
+        <p class="lead text-muted mb-4">A hand‑picked remix of Bootstrap components — navbars, heroes, cards, and footers — composed into a fresh, professional layout.</p>
+        <div class="d-flex gap-3">
+          <a href="/about" class="btn btn-primary btn-lg pulse">Explore Features</a>
+          <a href="/contact" class="btn btn-outline-primary btn-lg">Contact Us</a>
+        </div>
+      </div>
+      <div class="col-lg-5 slide-in-right">
+        <div class="glass p-4 p-lg-5 rounded-4 shadow-sm interactive-card">
+          <h5 class="fw-semibold mb-3">What's inside</h5>
+          <ul class="list-unstyled mb-0">
+            <li class="d-flex align-items-start mb-2">
+              <span class="badge rounded-pill text-bg-primary me-3 bounce">1</span>
+              Responsive Navbar & Hero
+            </li>
+            <li class="d-flex align-items-start mb-2">
+              <span class="badge rounded-pill text-bg-primary me-3 bounce animate-delay-1">2</span>
+              Feature Cards & Grid
+            </li>
+            <li class="d-flex align-items-start">
+              <span class="badge rounded-pill text-bg-primary me-3 bounce animate-delay-2">3</span>
+              Clean Footer & Contact Form
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Feature grid -->
+<section class="py-5" id="features">
+  <div class="container">
+    <div class="text-center mb-5 fade-in">
+      <h2 class="fw-bold">Features</h2>
+      <p class="text-muted">Carefully composed using Bootstrap 5 utilities and components.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4 fade-in animate-delay-1">
+        <div class="card h-100 hover-lift interactive-card">
+          <div class="card-body">
+            <div class="d-flex align-items-center mb-3">
+              <i class="fas fa-bars text-primary me-3" style="font-size: 1.5rem;"></i>
+              <h5 class="card-title mb-0">Modern Navbar</h5>
+            </div>
+            <p class="card-text text-muted">Sticky, collapsible, and consistent across pages for a professional feel.</p>
+            <div class="progress mt-3">
+              <div class="progress-bar" role="progressbar" style="width: 95%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 fade-in animate-delay-2">
+        <div class="card h-100 hover-lift interactive-card">
+          <div class="card-body">
+            <div class="d-flex align-items-center mb-3">
+              <i class="fas fa-star text-primary me-3" style="font-size: 1.5rem;"></i>
+              <h5 class="card-title mb-0">Hero Section</h5>
+            </div>
+            <p class="card-text text-muted">A gradient-backed hero to quickly communicate value with CTAs.</p>
+            <div class="progress mt-3">
+              <div class="progress-bar" role="progressbar" style="width: 90%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 fade-in animate-delay-3">
+        <div class="card h-100 hover-lift interactive-card">
+          <div class="card-body">
+            <div class="d-flex align-items-center mb-3">
+              <i class="fas fa-th-large text-primary me-3" style="font-size: 1.5rem;"></i>
+              <h5 class="card-title mb-0">Card Layout</h5>
+            </div>
+            <p class="card-text text-muted">Album-style cards for features, services, or portfolio items.</p>
+            <div class="progress mt-3">
+              <div class="progress-bar" role="progressbar" style="width: 88%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 fade-in animate-delay-4">
+        <div class="card h-100 hover-lift interactive-card">
+          <div class="card-body">
+            <div class="d-flex align-items-center mb-3">
+              <i class="fas fa-mobile-alt text-primary me-3" style="font-size: 1.5rem;"></i>
+              <h5 class="card-title mb-0">Responsive Grid</h5>
+            </div>
+            <p class="card-text text-muted">Mobile‑first design using the Bootstrap grid and utility classes.</p>
+            <div class="progress mt-3">
+              <div class="progress-bar" role="progressbar" style="width: 92%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 fade-in animate-delay-5">
+        <div class="card h-100 hover-lift interactive-card">
+          <div class="card-body">
+            <div class="d-flex align-items-center mb-3">
+              <i class="fas fa-check-circle text-primary me-3" style="font-size: 1.5rem;"></i>
+              <h5 class="card-title mb-0">Accessible Forms</h5>
+            </div>
+            <p class="card-text text-muted">Validated contact form with clear labels and feedback states.</p>
+            <div class="progress mt-3">
+              <div class="progress-bar" role="progressbar" style="width: 85%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 fade-in animate-delay-5">
+        <div class="card h-100 hover-lift interactive-card">
+          <div class="card-body">
+            <div class="d-flex align-items-center mb-3">
+              <i class="fas fa-heart text-primary me-3" style="font-size: 1.5rem;"></i>
+              <h5 class="card-title mb-0">Clean Footer</h5>
+            </div>
+            <p class="card-text text-muted">Concise, unobtrusive footer with essential links.</p>
+            <div class="progress mt-3">
+              <div class="progress-bar" role="progressbar" style="width: 87%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5 fade-in">
+      <h2 class="fw-bold">What Our Users Say</h2>
+      <p class="text-muted">Real feedback from developers who love our components.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-4 fade-in animate-delay-1">
+        <div class="testimonial-card">
+          <p class="mb-3">"RemixUI has transformed how we build landing pages. The components are clean, modern, and incredibly easy to customize."</p>
+          <div class="d-flex align-items-center">
+            <div class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center me-3" style="width: 40px; height: 40px;">
+              <i class="fas fa-user"></i>
+            </div>
+            <div>
+              <h6 class="mb-0">Sarah Johnson</h6>
+              <small class="text-muted">Frontend Developer</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 fade-in animate-delay-2">
+        <div class="testimonial-card">
+          <p class="mb-3">"The responsive design and accessibility features make this a go-to solution for all our client projects."</p>
+          <div class="d-flex align-items-center">
+            <div class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center me-3" style="width: 40px; height: 40px;">
+              <i class="fas fa-user"></i>
+            </div>
+            <div>
+              <h6 class="mb-0">Mike Chen</h6>
+              <small class="text-muted">UI/UX Designer</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 fade-in animate-delay-3">
+        <div class="testimonial-card">
+          <p class="mb-3">"Clean code, great documentation, and beautiful design. RemixUI is exactly what we needed for rapid prototyping."</p>
+          <div class="d-flex align-items-center">
+            <div class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center me-3" style="width: 40px; height: 40px;">
+              <i class="fas fa-user"></i>
+            </div>
+            <div>
+              <h6 class="mb-0">Emily Rodriguez</h6>
+              <small class="text-muted">Product Manager</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stats Section -->
+<section class="py-5">
+  <div class="container">
+    <div class="row g-4 text-center">
+      <div class="col-md-3 fade-in animate-delay-1">
+        <div class="p-4">
+          <i class="fas fa-download text-primary mb-3" style="font-size: 2.5rem;"></i>
+          <h3 class="fw-bold counter" data-target="10000">0</h3>
+          <p class="text-muted">Downloads</p>
+        </div>
+      </div>
+      <div class="col-md-3 fade-in animate-delay-2">
+        <div class="p-4">
+          <i class="fas fa-users text-primary mb-3" style="font-size: 2.5rem;"></i>
+          <h3 class="fw-bold counter" data-target="5000">0</h3>
+          <p class="text-muted">Happy Users</p>
+        </div>
+      </div>
+      <div class="col-md-3 fade-in animate-delay-3">
+        <div class="p-4">
+          <i class="fas fa-star text-primary mb-3" style="font-size: 2.5rem;"></i>
+          <h3 class="fw-bold counter" data-target="4.9">0</h3>
+          <p class="text-muted">Rating</p>
+        </div>
+      </div>
+      <div class="col-md-3 fade-in animate-delay-4">
+        <div class="p-4">
+          <i class="fas fa-code text-primary mb-3" style="font-size: 2.5rem;"></i>
+          <h3 class="fw-bold counter" data-target="50">0</h3>
+          <p class="text-muted">Components</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
